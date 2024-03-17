@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Home Control</title>
+<link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <h1 class="smart"><span>Smart Home</span></h1>
+<div class="container">
+    <div class="device">
+    <h1>Fan</h1>
+    <p class="subheader">Control the speed of the fan</p>
+    <img src="Images/Fan.png" alt="Fan Image">
+    <div class="controls">
+      <button id="toggleFan">On</button>
+      
+      <button id="decreaseSpeed">-</button>
+      <span id="fanSpeed">Speed: 0</span>
+      <button id="increaseSpeed">+</button>
+    </div>
+  </div>
+  
+  <div class="device">
+    <h1>Bulb</h1>
+    <p class="subheader">Turn the bulb on or off</p>
+    <img src="Images/Bulb.png" alt="Bulb Image">
+    <div class="controls">
+      <button id="toggleBulb">Turn Bulb On</button>
+    </div>
+  </div>
+  
+  <div class="device">
+    <h1>LED</h1>
+    <p class="header">Select the color for the LED</p>
+    <img id="ledImage" src="Images/ColourfulBulb.png" alt="LED Image">
+    <div class="controls">
+      <label for="ledColorCode">Color Code:</label>
+      <input type="text" id="ledColorCode" value="#">
+      <button id="applyColorButton">Apply</button>
+    </div>
+  </div>
+  
+
+  <!-- <div class="device">
+    <h1>Air Conditioner</h1>
+    <p class="header">Control the temperature with the AC</p>
+    <img src="Images/AC.png" alt="AC Image">
+    <div class="controls">
+      <button id="toggleAC">Turn AC On</button>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="device">
+  <h1>Air Conditioner</h1>
+  <p class="header">Control the temperature with the AC</p>
+  <img src="Images/AC.png" alt="AC Image">
+  <div class="controls">
+    <button id="toggleAC">Turn AC On</button>
+    <span id="acTempDisplay">20°C</span>
+    <input type="number" id="acTempInput" min="16" max="30" value="20">
+  </div>
+</div> -->
+
+<div class="device">
+  <h1 class="device-title">Air Conditioner</h1>
+  <p class="device-header">Control the temperature with the AC</p>
+  <img src="Images/AC.png" alt="AC Image" class="device-image">
+  <div class="controls">
+    <button id="toggleAC">Turn AC On</button>
+   
+    <input type="number" id="acTempInput" min="16" max="30" value="20" class="temp-input">
+    <span id="acTempDisplay" class="temp-display">20°C</span>
+  </div>
+</div>
+
+<script src="script.js">
+  
+</script>
+</body>
+</html>

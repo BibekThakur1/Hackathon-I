@@ -1,0 +1,212 @@
+
+body{
+    /* background: radial-gradient(#f69d3c, #3f87a6); */
+    background-image: url(Images/pexels1.jpg);
+    /* background:linear-gradient(45deg,#18272338, #206481); */
+        background-size: cover;
+    
+}
+
+
+.smart{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+    /* background-color: #f0f0f0; */
+  }
+  .subheader{
+    opacity: 0.5;
+  }
+  .device {
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    padding: 20px;
+    margin: 20px ;
+    width: 250px;
+    height: 250px;
+    /* background-color: #F7DED0; */
+    /* background:radial-gradient(3ae#798, #EED3D9); */
+    background: radial-gradient(#42105c, #20272b)/;
+    /* background: radial-gradient(#18272338, #206481); */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+  }
+  .device h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  .device p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .device img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  .controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .controls input[type="text"]#ledColorCode {
+  width: 60px;
+  padding: 2px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.controls input[type="text"]#ledColorCode:focus {
+  outline: none;
+  width: 100px;
+  box-shadow: 0 0 2px 1px rgba(0, 127, 255, 0.5);
+}
+
+.controls button#applyColorButton {
+  padding: 2px 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #00f;
+  cursor: pointer;
+}
+
+.controls button#applyColorButton:hover {
+  background-color: #00f;
+  color: #fff;
+}
+
+.controls button#applyColorButton:active {
+  background-color: #00e;
+  color: #fff;
+}
+
+.controls button#applyColorButton:focus {
+  outline: none;
+}
+
+  
+
+  .device:first-child img {
+    animation: fan-rotate 2s linear infinite;
+  }
+  
+  .device:first-child .controls button:nth-child(1):active ~ img {
+    animation-play-state: paused;
+  }
+  
+  .device:first-child .controls button:nth-child(2):active ~ img {
+    animation-play-state: running;
+  }
+  
+  @keyframes fan-rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .device:nth-child(2) {
+    /* background-image: url("Images/Bulb.png");background-size: cover; */
+    /* width: 100px;
+    height: 100px; */
+    /* border-radius: 50%; */
+    /* position: relative; */
+    /* overflow: hidden; */
+    /* opacity: 0.1; */
+  }
+  
+   .device:nth-child(2):before {
+    /* content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%; */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  /* .device:nth-child(2)[data-state="on"]:before {
+    opacity: 1;
+  } */ 
+
+/* 
+  .device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+   */
+  /* .device-title,
+  .device-header {
+    text-align: center;
+  }
+  
+  .device-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  } */
+  
+  #toggleAC {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    cursor: pointer;
+  }
+  
+  #toggleAC:hover {
+    background-color: #3e8e41; /* Darker green */
+  }
+  
+  .temp-display,
+  .temp-input {
+    font-size: 1.2rem;
+  }
+  
+  .temp-input {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  
+  .device-image.ac-animation {
+    animation: ac-spin 2s linear infinite; /* Animation details */
+  }
+  
+  @keyframes ac-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  
